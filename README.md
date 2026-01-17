@@ -94,4 +94,89 @@ The objective of this task is to segment customers based on their spending habit
 ## **Conclusion**
 This task demonstrates how **unsupervised learning** can reveal hidden patterns in customer behavior. By combining **K-Means clustering**, **dimensionality reduction**, and **strategy assignment**, businesses can create **data-driven marketing campaigns** tailored to each customer segment.
 
+Task 4: Loan Default Risk with Business Cost Optimization
+Task Objective
+
+The objective of this task is to predict the likelihood of loan default using binary classification models and optimize the decision threshold based on business cost considerations. The goal is to minimize financial losses by balancing the trade-off between approving risky loans and rejecting potentially good customers.
+
+Approach
+
+Dataset:
+Home Credit Default Risk Dataset
+
+Data Preprocessing:
+
+Handled missing values using appropriate statistical techniques
+
+Removed irrelevant and highly correlated features
+
+Used pre-engineered feature matrices to reduce preprocessing time
+
+Split data into training and testing sets with class stratification
+
+Exploratory Data Analysis (EDA):
+
+Analyzed target variable distribution to understand class imbalance
+
+Examined correlations between key features and default risk
+
+Reviewed feature importance files to identify influential variables
+
+Model Development:
+
+Trained baseline Logistic Regression model for comparison
+
+Trained CatBoost Classifier to handle complex feature interactions
+
+Evaluated models using ROC-AUC score
+
+Business Cost Optimization:
+
+Defined business costs for misclassification:
+
+False Positive (FP): Loan rejected for a reliable customer (lost opportunity)
+
+False Negative (FN): Loan approved for a defaulter (financial loss)
+
+Evaluated multiple probability thresholds
+
+Selected the optimal threshold that minimized total business cost
+
+Model Evaluation & Visualization:
+
+Plotted business cost against decision thresholds
+
+Analyzed confusion matrix at the optimized threshold
+
+Visualized top feature importances from the CatBoost model
+
+Results & Findings
+
+Model Performance:
+
+CatBoost outperformed Logistic Regression in terms of ROC-AUC
+
+Probability-based predictions allowed flexible threshold tuning
+
+Cost Optimization Results:
+
+Default threshold (0.5) was suboptimal for business objectives
+
+Optimized threshold significantly reduced overall financial risk
+
+Higher penalty on false negatives helped avoid costly loan defaults
+
+Feature Importance Insights:
+
+Customer income stability and credit history were strong predictors
+
+Previous payment behavior played a major role in default risk
+
+Business Application:
+By incorporating business costs into decision-making, financial institutions can approve loans more strategically, reduce default-related losses, and improve overall portfolio profitability.
+
+Conclusion
+
+This task highlights the importance of combining machine learning predictions with business-driven cost optimization. Instead of relying on a fixed classification threshold, the optimized approach aligns model decisions with real-world financial impact, making it highly suitable for practical credit risk assessment systems.
+
 
